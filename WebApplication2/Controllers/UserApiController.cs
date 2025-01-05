@@ -7,11 +7,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class UserApiController : ApiController
     {
         private HostpitalManagementEntities db = new HostpitalManagementEntities();
